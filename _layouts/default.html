@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% include head.html %}
+</head>
+<body id="body">
+
+  {% include site-header.html %}
+
+  {% if page.banner_url %}
+  <section class="banner grid-center" style="background-image:url('{{page.banner_url}}')">
+    <div class="col-6-middle centered">
+      <!-- <h2 class="big-bold"> This this a heading </h2>
+      <h3 class="not-bold"> This is a sub-heading </h3> -->
+    </div>
+  </section>
+  {% endif %}
+
+  {{content}}
+
+  {% include site-footer.html %}
+
+  {% include body-scripts.html %}
+
+</body>
+</html>
